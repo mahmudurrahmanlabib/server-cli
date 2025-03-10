@@ -16,7 +16,7 @@ else
 fi
 
 # Get latest release from GitHub API
-LATEST_RELEASE=$(curl -s https://api.github.com/repos/flywp/server-cli/releases/latest)
+LATEST_RELEASE=$(curl -s https://api.github.com/repos/mahmudurrahmanlabib/server-cli/releases/latest)
 TAG_NAME=$(echo "$LATEST_RELEASE" | grep -oP '"tag_name": "\K(.*)(?=")')
 DOWNLOAD_URL=$(echo "$LATEST_RELEASE" | grep -oP '"browser_download_url": "\K(.*'${OS}'-'${ARCH}'.tar.gz)(?=")')
 
